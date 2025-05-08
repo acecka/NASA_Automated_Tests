@@ -1,5 +1,7 @@
 from Pages.base_page import BasePage
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class NewsPageLocators:
@@ -13,10 +15,21 @@ class NewsPageLocators:
 
 
 class NewsPage(BasePage):
-    def click_blog1(self):
+    def click_news1(self):
         self.driver.find_element(*NewsPageLocators.NEWS1_PANEL).click()
 
+    def get_news1_href(self):
+        return self.driver.find_element(*NewsPageLocators.NEWS1_PANEL).get_attribute("href")
+
+    def get_news1_panel_title(self):
+        return self.driver.find_element(*NewsPageLocators.NEWS1_PANEL_TITLE).text
+
     def get_article_title(self):
+        WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located(NewsPageLocators.ARTICLE_TITLE)
+        )
         return self.driver.find_element(*NewsPageLocators.ARTICLE_TITLE).text
+
+
 
 

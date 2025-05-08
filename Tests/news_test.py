@@ -18,22 +18,19 @@ class NewsPageTest(BaseTest):
         WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located(NewsPageLocators.NEWS1_PANEL))
 
-        news1_url = self.driver.find_element(*NewsPageLocators.NEWS1_PANEL)
-        news1_link = news1_url.get_attribute("href")
-        self.assertIsNotNone(news1_link, "Missing href attribute")
-        news_title = WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located(NewsPageLocators.NEWS1_PANEL_TITLE)).text
+        news1_url = self.news_page.get_news1_href()
+        self.assertIsNotNone(news1_url, "Missing href attribute")
+
+        news_title = self.news_page.get_news1_panel_title()
+
         # navigate to the URL
-        self.news_page.click_blog1()
+        self.news_page.click_news1()
+
         # ensure actual navigation is correct
-        panel_navigation = self.driver.current_url
-        self.assertEqual(panel_navigation, news1_link, "URL mismatch")
+        self.assertEqual(self.driver.current_url, news1_url, "URL mismatch")
+
         # ensure article title is correct
-        WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located(NewsPageLocators.ARTICLE_TITLE))
         article_title = self.news_page.get_article_title()
-        # article_title = WebDriverWait(self.driver, 10).until(
-        #     EC.visibility_of_element_located(NewsPageLocators.ARTICLE_TITLE)).text
         self.assertEqual(news_title, article_title, "Title mismatch")
         sleep(2)
 
