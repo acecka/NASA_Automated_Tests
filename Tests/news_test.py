@@ -12,7 +12,7 @@ class NewsPageTest(BaseTest):
 
     def testVerifyNewsPanel1(self):
         """
-        Checks Blog 1 navigation menu accuracy
+        Checks Panel 1 of News, determines its type (News Release/ Blog) and verifies its URL accuracy, article title, image and content
         """
         WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located(NewsPageLocators.NEWS1_PANEL))
@@ -41,7 +41,7 @@ class NewsPageTest(BaseTest):
 
     def testVerifyNewsPanel2(self):
         """
-        Checks Blog 2 navigation menu accuracy
+        Checks Panel 2 of News, determines its type (News Release/ Blog) and verifies its URL accuracy, article title, image and content
         """
         WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located(NewsPageLocators.NEWS2_PANEL))
@@ -70,7 +70,7 @@ class NewsPageTest(BaseTest):
 
     def testVerifyNewsPanel3(self):
         """
-        Checks Blog 3 navigation menu accuracy
+        Checks Panel 3 of News, determines its type (News Release/ Blog) and verifies its URL accuracy, article title, image and content
         """
         WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located(NewsPageLocators.NEWS3_PANEL))
@@ -99,7 +99,7 @@ class NewsPageTest(BaseTest):
 
     def testVerifyNewsPanel4(self):
         """
-        Checks Blog 4 navigation menu accuracy
+        Checks Panel 4 of News, determines its type (News Release/ Blog) and verifies its URL accuracy, article title, image and content
         """
         WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located(NewsPageLocators.NEWS4_PANEL))
@@ -116,8 +116,8 @@ class NewsPageTest(BaseTest):
         self.assertEqual(self.driver.current_url, news4_url, "URL mismatch")
 
         # ensure article title is correct
-        # article_title = self.news_page.get_article_title()
-        # self.assertEqual(news_title, article_title, "Title mismatch")
+        article_title = self.news_page.get_article_title()
+        self.assertEqual(news_title, article_title, "Title mismatch")
 
         # ensure image is present
         self.assertTrue(self.news_page.get_article_image(), "Missing image attribute")
@@ -125,3 +125,6 @@ class NewsPageTest(BaseTest):
         # ensure article has content in its paragraphs and they are not empty
         self.assertTrue(self.news_page.check_article_content(),
                         "The article does not have valid content in <p> elements.")
+
+    def tearDown(self):
+        self.driver.quit()

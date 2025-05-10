@@ -18,7 +18,6 @@ class NewsPageLocators:
     ARTICLE_IMAGE_PANEL = (By.XPATH, '//section/div[2]/div[2]/div/div/div/div/figure/a')
     ARTICLE_CONTENT = (By.XPATH, '//section/div[2]/div[2]/div')
 
-
     BLOG_TITLE = (By.XPATH, '//h1')
     BLOG_IMAGE_PANEL = (By.XPATH, '//div[1]/div/div/figure/a')
     BLOG_CONTENT = (By.XPATH, '//div[4]/article/div[2]/div')
@@ -102,7 +101,3 @@ class NewsPage(BasePage):
 
     def get_news4_panel_title(self):
         return self.driver.find_element(*NewsPageLocators.NEWS4_PANEL_TITLE).text
-
-
-
-
