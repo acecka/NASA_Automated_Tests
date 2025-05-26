@@ -11,6 +11,10 @@ class HomePageLocators:
     MULTIMEDIA_LIST = (By.XPATH, '/html/body/header[2]/div/nav/div/ul/li[2]/button')
     MULTIMEDIA = (By.XPATH, '/html/body/header[2]/div/nav/div/ul/li[2]/ul/a')
     MULTIMEDIA_PAGE_TITLE = (By.XPATH, '/html/body/main/article/div/div[2]/div/div/div[1]/h1')
+    NASA_PLUS = (By.XPATH, '//header[2]/div/nav/div/ul/li[3]/a')
+
+
+
 
 
 class HomePage(BasePage):
@@ -26,4 +30,8 @@ class HomePage(BasePage):
 
     def click_multimedia(self):
         self.driver.find_element(*HomePageLocators.MULTIMEDIA).click()
+        return MultimediaPage(self.driver)
+
+    def click_nasa_plus(self):
+        self.driver.find_element(*HomePageLocators.NASA_PLUS).click()
         return MultimediaPage(self.driver)

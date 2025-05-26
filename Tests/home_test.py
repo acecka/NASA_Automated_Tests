@@ -2,9 +2,13 @@ from Tests.base_test import BaseTest
 from Pages.home_page import HomePageLocators
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
 
 
-class VerifyPage(BaseTest):
+class VerifyPages(BaseTest):
+    def setUp(self):
+        super().setUp()
+
     def testValidPage(self):
         """
         Verifies the page title
@@ -32,5 +36,16 @@ class VerifyPage(BaseTest):
         self.home_page.click_multimedia()
         self.assertIn("Multimedia - NASA", self.driver.title)
         self.assertIn("Multimedia", self.driver.find_element(*HomePageLocators.MULTIMEDIA_PAGE_TITLE).text)
+
+    def testGoToNASAPlus(self):
+        """
+        Checks NASA+ navigation menu accuracy
+        """
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(HomePageLocators.NASA_PLUS))
+        self.home_page.click_nasa_plus()
+        self.assertIn("Home | NASA+", self.driver.title)
+
+    def tearDown(self):
+        self.driver.quit()
 
 
