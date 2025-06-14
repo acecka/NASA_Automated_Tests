@@ -17,9 +17,9 @@ class NasaPlusPage(BasePage):
         """
         Clicks the pause button on the carousel.
         """
-        # WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(NasaPlusPageLocators.PAUSE_BUTTON))
+        # WebDriverWait(self.driver,10).until(EC.element_to_be_clickable(NasaPlusPageLocators.PAUSE_BUTTON))
         self.driver.find_element(*NasaPlusPageLocators.PAUSE_BUTTON).click()
-        sleep (2)
+        sleep(2)
 
     def choose_video_1(self):
         """

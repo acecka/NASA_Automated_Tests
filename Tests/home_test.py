@@ -2,7 +2,6 @@ from Tests.base_test import BaseTest
 from Pages.home_page import HomePageLocators
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from time import sleep
 
 
 class VerifyPages(BaseTest):
@@ -47,5 +46,3 @@ class VerifyPages(BaseTest):
 
     def tearDown(self):
         self.driver.quit()
-
-
