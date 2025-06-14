@@ -43,7 +43,7 @@ class VerifyPages(BaseTest):
         """
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(HomePageLocators.NASA_PLUS))
         self.home_page.click_nasa_plus()
-        self.assertIn("Home | NASA+", self.driver.title)
+        self.assertIn("Home | NASA+", self.driver.title, "Failed to navigate to NASA+ page")
 
     def tearDown(self):
         self.driver.quit()
