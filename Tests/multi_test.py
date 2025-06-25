@@ -12,12 +12,14 @@ class MultiPageTests(BaseTest):
         self.multi_page = self.home_page.click_multimedia()
 
     def testGoToNasaPlus(self):
+        """ Checks NASA+ navigation menu accuracy"""
         nasa_plus_url = self.multi_page.get_nasa_plus_url()
         self.multi_page.click_nasa_plus()
         self.assertIn("home | nasa+", self.driver.title.lower(), "Failed to navigate to NASA+ page")
         self.assertEqual(self.driver.current_url, nasa_plus_url, "URL mismatch for NASA+ page")
 
     def testGoToNasaLive(self):
+        """ Checks NASA Live navigation menu accuracy and ensures its content is loaded and accurate"""
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(MultiPageLocators.NASA_LIVE_BUTTON))
         nasa_live_url = self.multi_page.get_nasa_live_url()
         self.multi_page.click_nasa_live()
@@ -29,6 +31,7 @@ class MultiPageTests(BaseTest):
         self.assertIn("nasa", yt_account.text.lower(), "YouTube account name is not 'NASA'")
 
     def testGoToImageGallery(self):
+        """ Checks Image Gallery navigation menu accuracy and ensures its content is loaded and accurate"""
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(MultiPageLocators.IMAGE_GALLERY_BUTTON))
         image_gallery_url = self.multi_page.get_image_gallery_url()
         self.multi_page.click_image_gallery()
@@ -36,6 +39,7 @@ class MultiPageTests(BaseTest):
         self.assertEqual(self.driver.current_url, image_gallery_url, "URL mismatch for Image Gallery page")
 
     def testGoToPodcasts(self):
+        """ Checks Podcasts navigation menu accuracy and ensures its content is loaded and accurate"""
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(MultiPageLocators.PODCASTS_BUTTON))
         podcasts_url = self.multi_page.get_podcasts_url()
         self.multi_page.click_podcasts()

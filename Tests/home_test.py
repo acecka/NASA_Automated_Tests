@@ -44,5 +44,57 @@ class VerifyPages(BaseTest):
         self.home_page.click_nasa_plus()
         self.assertIn("Home | NASA+", self.driver.title, "Failed to navigate to NASA+ page")
 
+    def testExploreMenuGoToMissions(self):
+        """
+        Tests the navigation to the Missions page from the Explore menu and verifies the page title and URL.
+        """
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(HomePageLocators.EXPLORE_EXPAND))
+        self.home_page.driver.find_element(*HomePageLocators.EXPLORE_EXPAND).click()
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(HomePageLocators.EXPLORE_MISSIONS))
+        self.home_page.driver.find_element(*HomePageLocators.EXPLORE_MISSIONS).click()
+        missions_url = self.home_page.get_missions_url()
+        self.home_page.driver.find_element(*HomePageLocators.EXPLORE_MISSIONS_MAIN).click()
+        # Ensures the page title and URL are correct
+        self.assertIn("Missions - NASA", self.driver.title, "Failed to navigate to Missions page")
+        self.assertEqual(self.driver.current_url, missions_url, "Missions URL mismatch")
+
+    def testExploreMenuGoToUniverse(self):
+        """
+        Tests the navigation to the Universe page from the Explore menu and verifies the page title and URL.
+        """
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(HomePageLocators.EXPLORE_EXPAND))
+        self.home_page.driver.find_element(*HomePageLocators.EXPLORE_EXPAND).click()
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(HomePageLocators.EXPLORE_UNIVERSE))
+        self.home_page.driver.find_element(*HomePageLocators.EXPLORE_UNIVERSE).click()
+        universe_url = self.home_page.get_universe_url()
+        self.home_page.driver.find_element(*HomePageLocators.EXPLORE_UNIVERSE_MAIN).click()
+        # Ensures the page title and URL are correct
+        self.assertIn("Universe - NASA Science", self.driver.title, "Failed to navigate to Universe page")
+        self.assertEqual(self.driver.current_url, universe_url, "Universe URL mismatch")
+
+    def testSearchBoxMarsRover(self):
+        """
+        Tests the search functionality by entering "Mars Rover" into the search box and verifying the results.
+        """
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(HomePageLocators.SEARCH_BOX))
+        self.home_page.driver.find_element(*HomePageLocators.SEARCH_BOX).send_keys("Mars Rover")
+        self.home_page.driver.find_element(*HomePageLocators.SEARCH_BOX).submit()
+        # Main assertion for full phrase to catch most relevant result
+        assert "Mars Rover" in self.home_page.driver.find_element(*HomePageLocators.SEARCH_RESULTS1).text, "Mars Rover not found in the first result"
+        # Additional less accurate assertion for just "Mars"
+        assert "Mars" in self.home_page.driver.find_element(*HomePageLocators.SEARCH_RESULTS_ALL).text, "Mars not found in search results"
+
+    def testSearchBoxVenus(self):
+        """
+        Tests the search functionality by entering "Venus" into the search box and verifying the results.
+        """
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(HomePageLocators.SEARCH_BOX))
+        self.home_page.driver.find_element(*HomePageLocators.SEARCH_BOX).send_keys("Venus")
+        self.home_page.driver.find_element(*HomePageLocators.SEARCH_BOX).submit()
+        # Main assertion for full phrase to catch most relevant result
+        assert "Venus" in self.home_page.driver.find_element(*HomePageLocators.SEARCH_RESULTS1).text, "Venus not found in the first result"
+        # Additional less accurate assertion for just "Venus"
+        assert "Venus" in self.home_page.driver.find_element(*HomePageLocators.SEARCH_RESULTS_ALL).text, "Venus not found in search results"
+
     def tearDown(self):
         self.driver.quit()
