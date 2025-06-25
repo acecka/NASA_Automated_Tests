@@ -17,4 +17,4 @@ In the future I plan to expand the tests to cover the NASA+ page - which consist
 
 **How to run?**
 
-To run the tests, simply use the Executor file - which will not only run all available tests but also generate a raport using an existing HTML Test runner library.
+To run the tests, use the requirements.txt file to sync libraries to ones used by the repository, then after cloning the repository to have on your local machine simply use the Executor file - which will not only run all available tests but also generate a raport using an existing HTML Test runner library.
