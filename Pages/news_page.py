@@ -54,39 +54,17 @@ class NewsPage(BasePage):
         else:
             raise ValueError("Unknown news type in URL")
 
-    # def check_article_content(self):
-    #     panel_url = self.driver.current_url
-    #     if "news-release" in panel_url:
-    #         article_panel = self.driver.find_element(*NewsPageLocators.ARTICLE_CONTENT)
-    #         paragraphs = article_panel.find_elements(By.TAG_NAME, "p")
-    #         return bool(paragraphs) and all(paragraph.text.strip() for paragraph in paragraphs)
-    #     elif "blogs" in panel_url:
-    #         WebDriverWait(self.driver, 10).until(
-    #             EC.visibility_of_element_located(NewsPageLocators.BLOG_CONTENT)
-    #         )
-    #         blog_panel = self.driver.find_element(By.CLASS_NAME, "single-blog-content")
-    #         paragraphs = blog_panel.find_elements(By.TAG_NAME, "p")
-    #         return bool(paragraphs) and all(paragraph.text.strip() for paragraph in paragraphs)
-    #
-    #     else:
-    #         raise ValueError("Unknown news type in URL")
-
     def check_article_content(self):
         panel_url = self.driver.current_url
         if "news-release" in panel_url:
             article_panel = self.driver.find_element(*NewsPageLocators.ARTICLE_CONTENT)
             return article_panel.find_elements(By.TAG_NAME, "p")
-            # paragraphs = article_panel.find_elements(By.TAG_NAME, "p")
-            # return bool(paragraphs) and all(paragraph.text.strip() for paragraph in paragraphs)
         elif "blogs" in panel_url:
             WebDriverWait(self.driver, 10).until(
                 EC.visibility_of_element_located(NewsPageLocators.BLOG_CONTENT)
             )
             blog_panel = self.driver.find_element(*NewsPageLocators.BLOG_CONTENT)
             return blog_panel.find_elements(By.TAG_NAME, "p")
-
-            # paragraphs = blog_panel.find_elements(By.TAG_NAME, "p")
-            # return bool(paragraphs) and all(paragraph.text.strip() for paragraph in paragraphs)
         else:
             raise ValueError("Unknown news type in URL")
 
