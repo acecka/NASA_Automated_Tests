@@ -17,6 +17,7 @@ class MultiPageLocators:
     IMAGES_HEADER = (By.XPATH, '//div/div[2]/div[2]/div/div[1]/h1')
     PODCASTS_HEADER = (By.XPATH, '//div[3]/h1')
     NASA_LIVE_HEADER = (By.XPATH, '//div/div[1]/div/div/div[1]/div/h3')
+    NASA_PLUS_HEADER = (By.XPATH, '//main/div[1]/div[1]/div/figure[1]/div')
 
 
 class MultimediaPage(BasePage):
@@ -29,6 +30,7 @@ class MultimediaPage(BasePage):
         self.driver.execute_script("arguments[0].scrollIntoView(true);", nasa_plus)
         WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(MultiPageLocators.NASA_PLUS_BUTTON))
         ActionChains(self.driver).move_to_element(nasa_plus).click().perform()
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(MultiPageLocators.NASA_PLUS_HEADER))
 
     def get_nasa_plus_url(self):
         nasa_plus = self.driver.find_element(*MultiPageLocators.NASA_PLUS_BUTTON)
