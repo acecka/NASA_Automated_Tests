@@ -95,7 +95,7 @@ class NewsPage(BasePage):
         news4.click()
 
     def get_news1_href(self):
-        news1_url = self.driver.find_element(*NewsPageLocators.NEWS4_PANEL)
+        news1_url = self.driver.find_element(*NewsPageLocators.NEWS1_PANEL)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", news1_url)
         ActionChains(self.driver).move_to_element(news1_url).perform()
         return news1_url.get_attribute("href")

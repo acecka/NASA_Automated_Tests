@@ -21,7 +21,6 @@ class MultiPageTests(BaseTest):
 
     def testGoToNasaLive(self):
         """ Checks NASA Live navigation menu accuracy and ensures its content is loaded and accurate"""
-        # WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(MultiPageLocators.NASA_LIVE_BUTTON))
         nasa_live_url = self.multi_page.get_nasa_live_url()
         self.multi_page.click_nasa_live()
         # wait to process cookies rejection and to let the video play

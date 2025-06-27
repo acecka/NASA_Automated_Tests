@@ -14,6 +14,7 @@ class MultiPageLocators:
     IMAGE_GALLERY_BUTTON = (By.XPATH, '//div[6]/div/div/div[1]/a')
     PODCASTS_BUTTON = (By.XPATH, '//div[7]/div/div/div[1]/a')
     YT_ACCOUNT = (By.XPATH, '//div[1]/ytd-channel-name/div/div/yt-formatted-string/a')
+    YT_COOKIES = (By.XPATH, '//c-wiz/div/div/div/div[2]/div[1]')
     YT_REJECT_COOKIES = (By.XPATH, '//div[1]/form[1]/div/div/button')
 
     IMAGES_HEADER = (By.XPATH, '//div/div[2]/div[2]/div/div[1]/h1')
@@ -46,6 +47,8 @@ class MultimediaPage(BasePage):
         nasa_live = self.driver.find_element(*MultiPageLocators.NASA_LIVE_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", nasa_live)
         ActionChains(self.driver).move_to_element(nasa_live).click().perform()
+        # wait to load cookie page
+        sleep(2)
         self.driver.find_element(*MultiPageLocators.YT_REJECT_COOKIES).click()
 
     def get_nasa_live_url(self):
@@ -68,7 +71,6 @@ class MultimediaPage(BasePage):
         image_gallery = self.driver.find_element(*MultiPageLocators.IMAGE_GALLERY_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", image_gallery)
         ActionChains(self.driver).move_to_element(image_gallery).perform()
-        # repeated click() for laptop use
         image_gallery.click()
 
     def get_image_gallery_url(self):
@@ -83,7 +85,6 @@ class MultimediaPage(BasePage):
         podcasts_button = self.driver.find_element(*MultiPageLocators.PODCASTS_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", podcasts_button)
         ActionChains(self.driver).move_to_element(podcasts_button).perform()
-        # repeated click() for laptop use
         podcasts_button.click()
 
     def get_podcasts_url(self):
