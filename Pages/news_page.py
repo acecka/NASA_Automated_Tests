@@ -1,3 +1,5 @@
+from selenium.webdriver import ActionChains
+
 from Pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -69,37 +71,73 @@ class NewsPage(BasePage):
             raise ValueError("Unknown news type in URL")
 
     def click_news1(self):
-        self.driver.find_element(*NewsPageLocators.NEWS1_PANEL).click()
+        news1 = self.driver.find_element(*NewsPageLocators.NEWS1_PANEL)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news1)
+        ActionChains(self.driver).move_to_element(news1).perform()
+        news1.click()
 
     def click_news2(self):
-        self.driver.find_element(*NewsPageLocators.NEWS2_PANEL).click()
+        news2 = self.driver.find_element(*NewsPageLocators.NEWS2_PANEL)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news2)
+        ActionChains(self.driver).move_to_element(news2).perform()
+        news2.click()
 
     def click_news3(self):
-        self.driver.find_element(*NewsPageLocators.NEWS3_PANEL).click()
+        news3 = self.driver.find_element(*NewsPageLocators.NEWS3_PANEL)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news3)
+        ActionChains(self.driver).move_to_element(news3).perform()
+        news3.click()
 
     def click_news4(self):
-        self.driver.find_element(*NewsPageLocators.NEWS4_PANEL).click()
+        news4 = self.driver.find_element(*NewsPageLocators.NEWS4_PANEL)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news4)
+        ActionChains(self.driver).move_to_element(news4).perform()
+        news4.click()
 
     def get_news1_href(self):
-        return self.driver.find_element(*NewsPageLocators.NEWS1_PANEL).get_attribute("href")
+        news1_url = self.driver.find_element(*NewsPageLocators.NEWS4_PANEL)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news1_url)
+        ActionChains(self.driver).move_to_element(news1_url).perform()
+        return news1_url.get_attribute("href")
 
     def get_news2_href(self):
-        return self.driver.find_element(*NewsPageLocators.NEWS2_PANEL).get_attribute("href")
+        news2_url = self.driver.find_element(*NewsPageLocators.NEWS2_PANEL)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news2_url)
+        ActionChains(self.driver).move_to_element(news2_url).perform()
+        return news2_url.get_attribute("href")
 
     def get_news3_href(self):
-        return self.driver.find_element(*NewsPageLocators.NEWS3_PANEL).get_attribute("href")
+        news3_url = self.driver.find_element(*NewsPageLocators.NEWS3_PANEL)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news3_url)
+        ActionChains(self.driver).move_to_element(news3_url).perform()
+        return news3_url.get_attribute("href")
 
     def get_news4_href(self):
-        return self.driver.find_element(*NewsPageLocators.NEWS4_PANEL).get_attribute("href")
+        news4_url = self.driver.find_element(*NewsPageLocators.NEWS4_PANEL)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news4_url)
+        ActionChains(self.driver).move_to_element(news4_url).perform()
+        return news4_url.get_attribute("href")
 
     def get_news1_panel_title(self):
-        return self.driver.find_element(*NewsPageLocators.NEWS1_PANEL_TITLE).text
+        news1_title = self.driver.find_element(*NewsPageLocators.NEWS1_PANEL_TITLE)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news1_title)
+        ActionChains(self.driver).move_to_element(news1_title).perform()
+        return news1_title.text
 
     def get_news2_panel_title(self):
-        return self.driver.find_element(*NewsPageLocators.NEWS2_PANEL_TITLE).text
+        news2_title = self.driver.find_element(*NewsPageLocators.NEWS2_PANEL_TITLE)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news2_title)
+        ActionChains(self.driver).move_to_element(news2_title).perform()
+        return news2_title.text
 
     def get_news3_panel_title(self):
-        return self.driver.find_element(*NewsPageLocators.NEWS3_PANEL_TITLE).text
+        news3_title = self.driver.find_element(*NewsPageLocators.NEWS3_PANEL_TITLE)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news3_title)
+        ActionChains(self.driver).move_to_element(news3_title).perform()
+        return news3_title.text
 
     def get_news4_panel_title(self):
-        return self.driver.find_element(*NewsPageLocators.NEWS4_PANEL_TITLE).text
+        news4_title = self.driver.find_element(*NewsPageLocators.NEWS4_PANEL_TITLE)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", news4_title)
+        ActionChains(self.driver).move_to_element(news4_title).perform()
+        return news4_title.text
