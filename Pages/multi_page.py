@@ -14,6 +14,10 @@ class MultiPageLocators:
     YT_ACCOUNT = (By.XPATH, '//div[1]/ytd-channel-name/div/div/yt-formatted-string/a')
     YT_REJECT_COOKIES = (By.XPATH, '//div[1]/form[1]/div/div/button')
 
+    IMAGES_HEADER = (By.XPATH, '//div/div[2]/div[2]/div/div[1]/h1')
+    PODCASTS_HEADER = (By.XPATH, '//div[3]/h1')
+    NASA_LIVE_HEADER = (By.XPATH, '//div/div[1]/div/div/div[1]/div/h3')
+
 
 class MultimediaPage(BasePage):
     def click_nasa_plus(self):

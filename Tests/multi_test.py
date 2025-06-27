@@ -35,6 +35,7 @@ class MultiPageTests(BaseTest):
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(MultiPageLocators.IMAGE_GALLERY_BUTTON))
         image_gallery_url = self.multi_page.get_image_gallery_url()
         self.multi_page.click_image_gallery()
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(MultiPageLocators.IMAGES_HEADER))
         self.assertIn("nasa images", self.driver.title.lower(), "Failed to navigate to Image Gallery page")
         self.assertEqual(self.driver.current_url, image_gallery_url, "URL mismatch for Image Gallery page")
 
@@ -43,6 +44,7 @@ class MultiPageTests(BaseTest):
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(MultiPageLocators.PODCASTS_BUTTON))
         podcasts_url = self.multi_page.get_podcasts_url()
         self.multi_page.click_podcasts()
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(MultiPageLocators.PODCASTS_HEADER))
         self.assertIn("podcasts", self.driver.title.lower(), "Failed to navigate to Podcasts page")
         self.assertEqual(self.driver.current_url, podcasts_url, "URL mismatch for Podcasts page")
 
