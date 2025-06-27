@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Test Report</title>
+    <meta name="generator" content="HTMLTestRunner 1.1.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
+    <style>
+        
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+<div class='heading'>
+    <h1 style="margin-left:1ex;">Unit Test Report</h1>
+    
+    <p class='attribute'><strong>Start Time : </strong> 2025-06-27 15:11:43</p>
+    
+    <p class='attribute'><strong>Duration : </strong> 0:01:11.158614</p>
+    
+    <p class='attribute'><strong>Status : </strong> Error 16</p>
+    
+    <p class='attribute'><strong>Description : </strong> Test report generation using HTMLTestRunner-rv</p>
+    
+    <p class='attribute'><strong>Tested By : </strong> Unknown</p>
+    
+</div>
+<div>
+    <p id='show_detail_line'><b>Show</b>
+        <button><a href='javascript:showCase(0)' style="color:#660066;">Summary</a></button>
+        <button><a href='javascript:showCase(1)' style="color:#660066;">Failed</a></button>
+        <button><a href='javascript:showCase(2)' style="color:#660066;">Passed</a></button>
+        <button><a href='javascript:showCase(3)' style="color:#660066;">All</a></button>
+    </p>
+    <table id='result_table'>
+        <colgroup>
+            <col align='left'/>
+            <col align='right'/>
+            <col align='right'/>
+            <col align='right'/>
+            <col align='right'/>
+            <col align='right'/>
+        </colgroup>
+        <tr id='header_row'>
+            <td>Test Group/Test case</td>
+            <td>Count</td>
+            <td>Pass</td>
+            <td>Fail</td>
+            <td>Error</td>
+            <td>View</td>
+        </tr>
+        
+        <tr class='errorClass' style="font-weight:bold;color:white;">
+            <td><a href="javascript:showClassDetail('c1','8')">home_test.VerifyPages</a></td>
+            <td>8</td>
+            <td>0</td>
+            <td>0</td>
+            <td>8</td>
+            <td>
+                <button><a href="javascript:showClassDetail('c1','8')"
+                           style="color:#660066;">Detail</a></button>
+            </td>
+        </tr>
+            
+            <tr id="ft1.1" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.1')">testExploreMenuGoToMissions: Tests the navigation to the Missions page from the Explore menu and verifies the page title and URL.</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.1')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.1' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.1').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:03.303209 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/home_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010d3c0d98 chromedriver + 5954968
+1   chromedriver                        0x000000010d3b89ca chromedriver + 5921226
+2   chromedriver                        0x000000010ce785e0 chromedriver + 415200
+3   chromedriver                        0x000000010ceb8ce4 chromedriver + 679140
+4   chromedriver                        0x000000010ceb7cd4 chromedriver + 675028
+5   chromedriver                        0x000000010ceb29b5 chromedriver + 653749
+6   chromedriver                        0x000000010ceadbae chromedriver + 633774
+7   chromedriver                        0x000000010cefe7cc chromedriver + 964556
+8   chromedriver                        0x000000010cefdcb6 chromedriver + 961718
+9   chromedriver                        0x000000010ceefde3 chromedriver + 904675
+10  chromedriver                        0x000000010cebbc6a chromedriver + 691306
+11  chromedriver                        0x000000010cebcdc1 chromedriver + 695745
+12  chromedriver                        0x000000010d383e50 chromedriver + 5705296
+13  chromedriver                        0x000000010d387da0 chromedriver + 5721504
+14  chromedriver                        0x000000010d365797 chromedriver + 5580695
+15  chromedriver                        0x000000010d38882b chromedriver + 5724203
+16  chromedriver                        0x000000010d353fc4 chromedriver + 5509060
+17  chromedriver                        0x000000010d3a7088 chromedriver + 5849224
+18  chromedriver                        0x000000010d3a724f chromedriver + 5849679
+19  chromedriver                        0x000000010d3b85a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft1.2" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.2')">testExploreMenuGoToUniverse: Tests the navigation to the Universe page from the Explore menu and verifies the page title and URL.</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.2')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.2' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.2').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:07.707592 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/home_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001090a6d98 chromedriver + 5954968
+1   chromedriver                        0x000000010909e9ca chromedriver + 5921226
+2   chromedriver                        0x0000000108b5e5e0 chromedriver + 415200
+3   chromedriver                        0x0000000108b9ece4 chromedriver + 679140
+4   chromedriver                        0x0000000108b9dcd4 chromedriver + 675028
+5   chromedriver                        0x0000000108b989b5 chromedriver + 653749
+6   chromedriver                        0x0000000108b93bae chromedriver + 633774
+7   chromedriver                        0x0000000108be47cc chromedriver + 964556
+8   chromedriver                        0x0000000108be3cb6 chromedriver + 961718
+9   chromedriver                        0x0000000108bd5de3 chromedriver + 904675
+10  chromedriver                        0x0000000108ba1c6a chromedriver + 691306
+11  chromedriver                        0x0000000108ba2dc1 chromedriver + 695745
+12  chromedriver                        0x0000000109069e50 chromedriver + 5705296
+13  chromedriver                        0x000000010906dda0 chromedriver + 5721504
+14  chromedriver                        0x000000010904b797 chromedriver + 5580695
+15  chromedriver                        0x000000010906e82b chromedriver + 5724203
+16  chromedriver                        0x0000000109039fc4 chromedriver + 5509060
+17  chromedriver                        0x000000010908d088 chromedriver + 5849224
+18  chromedriver                        0x000000010908d24f chromedriver + 5849679
+19  chromedriver                        0x000000010909e5a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft1.3" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.3')">testGoToMultimedia: Checks Multimedia navigation menu accuracy</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.3')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.3' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.3').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:15.723664 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/home_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000108d45d98 chromedriver + 5954968
+1   chromedriver                        0x0000000108d3d9ca chromedriver + 5921226
+2   chromedriver                        0x00000001087fd5e0 chromedriver + 415200
+3   chromedriver                        0x000000010883dce4 chromedriver + 679140
+4   chromedriver                        0x000000010883ccd4 chromedriver + 675028
+5   chromedriver                        0x00000001088379b5 chromedriver + 653749
+6   chromedriver                        0x0000000108832bae chromedriver + 633774
+7   chromedriver                        0x00000001088837cc chromedriver + 964556
+8   chromedriver                        0x0000000108882cb6 chromedriver + 961718
+9   chromedriver                        0x0000000108874de3 chromedriver + 904675
+10  chromedriver                        0x0000000108840c6a chromedriver + 691306
+11  chromedriver                        0x0000000108841dc1 chromedriver + 695745
+12  chromedriver                        0x0000000108d08e50 chromedriver + 5705296
+13  chromedriver                        0x0000000108d0cda0 chromedriver + 5721504
+14  chromedriver                        0x0000000108cea797 chromedriver + 5580695
+15  chromedriver                        0x0000000108d0d82b chromedriver + 5724203
+16  chromedriver                        0x0000000108cd8fc4 chromedriver + 5509060
+17  chromedriver                        0x0000000108d2c088 chromedriver + 5849224
+18  chromedriver                        0x0000000108d2c24f chromedriver + 5849679
+19  chromedriver                        0x0000000108d3d5a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft1.4" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.4')">testGoToNASAPlus: Checks NASA+ navigation menu accuracy</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.4')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.4' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.4').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:18.708134 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/home_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001098d4d98 chromedriver + 5954968
+1   chromedriver                        0x00000001098cc9ca chromedriver + 5921226
+2   chromedriver                        0x000000010938c5e0 chromedriver + 415200
+3   chromedriver                        0x00000001093ccce4 chromedriver + 679140
+4   chromedriver                        0x00000001093cbcd4 chromedriver + 675028
+5   chromedriver                        0x00000001093c69b5 chromedriver + 653749
+6   chromedriver                        0x00000001093c1bae chromedriver + 633774
+7   chromedriver                        0x00000001094127cc chromedriver + 964556
+8   chromedriver                        0x0000000109411cb6 chromedriver + 961718
+9   chromedriver                        0x0000000109403de3 chromedriver + 904675
+10  chromedriver                        0x00000001093cfc6a chromedriver + 691306
+11  chromedriver                        0x00000001093d0dc1 chromedriver + 695745
+12  chromedriver                        0x0000000109897e50 chromedriver + 5705296
+13  chromedriver                        0x000000010989bda0 chromedriver + 5721504
+14  chromedriver                        0x0000000109879797 chromedriver + 5580695
+15  chromedriver                        0x000000010989c82b chromedriver + 5724203
+16  chromedriver                        0x0000000109867fc4 chromedriver + 5509060
+17  chromedriver                        0x00000001098bb088 chromedriver + 5849224
+18  chromedriver                        0x00000001098bb24f chromedriver + 5849679
+19  chromedriver                        0x00000001098cc5a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft1.5" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.5')">testGoToNews: Checks News & Events navigation menu accuracy</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.5')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.5' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.5').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:27.823993 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/home_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000102712d98 chromedriver + 5954968
+1   chromedriver                        0x000000010270a9ca chromedriver + 5921226
+2   chromedriver                        0x00000001021ca5e0 chromedriver + 415200
+3   chromedriver                        0x000000010220ace4 chromedriver + 679140
+4   chromedriver                        0x0000000102209cd4 chromedriver + 675028
+5   chromedriver                        0x00000001022049b5 chromedriver + 653749
+6   chromedriver                        0x00000001021ffbae chromedriver + 633774
+7   chromedriver                        0x00000001022507cc chromedriver + 964556
+8   chromedriver                        0x000000010224fcb6 chromedriver + 961718
+9   chromedriver                        0x0000000102241de3 chromedriver + 904675
+10  chromedriver                        0x000000010220dc6a chromedriver + 691306
+11  chromedriver                        0x000000010220edc1 chromedriver + 695745
+12  chromedriver                        0x00000001026d5e50 chromedriver + 5705296
+13  chromedriver                        0x00000001026d9da0 chromedriver + 5721504
+14  chromedriver                        0x00000001026b7797 chromedriver + 5580695
+15  chromedriver                        0x00000001026da82b chromedriver + 5724203
+16  chromedriver                        0x00000001026a5fc4 chromedriver + 5509060
+17  chromedriver                        0x00000001026f9088 chromedriver + 5849224
+18  chromedriver                        0x00000001026f924f chromedriver + 5849679
+19  chromedriver                        0x000000010270a5a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft1.6" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.6')">testSearchBoxMarsRover: Tests the search functionality by entering "Mars Rover" into the search box and verifying the results.</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.6')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.6' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.6').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:30.015673 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/home_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000104a28d98 chromedriver + 5954968
+1   chromedriver                        0x0000000104a209ca chromedriver + 5921226
+2   chromedriver                        0x00000001044e05e0 chromedriver + 415200
+3   chromedriver                        0x0000000104520ce4 chromedriver + 679140
+4   chromedriver                        0x000000010451fcd4 chromedriver + 675028
+5   chromedriver                        0x000000010451a9b5 chromedriver + 653749
+6   chromedriver                        0x0000000104515bae chromedriver + 633774
+7   chromedriver                        0x00000001045667cc chromedriver + 964556
+8   chromedriver                        0x0000000104565cb6 chromedriver + 961718
+9   chromedriver                        0x0000000104557de3 chromedriver + 904675
+10  chromedriver                        0x0000000104523c6a chromedriver + 691306
+11  chromedriver                        0x0000000104524dc1 chromedriver + 695745
+12  chromedriver                        0x00000001049ebe50 chromedriver + 5705296
+13  chromedriver                        0x00000001049efda0 chromedriver + 5721504
+14  chromedriver                        0x00000001049cd797 chromedriver + 5580695
+15  chromedriver                        0x00000001049f082b chromedriver + 5724203
+16  chromedriver                        0x00000001049bbfc4 chromedriver + 5509060
+17  chromedriver                        0x0000000104a0f088 chromedriver + 5849224
+18  chromedriver                        0x0000000104a0f24f chromedriver + 5849679
+19  chromedriver                        0x0000000104a205a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft1.7" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.7')">testSearchBoxVenus: Tests the search functionality by entering "Venus" into the search box and verifying the results.</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.7')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.7' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.7').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:32.378392 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/home_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010670cd98 chromedriver + 5954968
+1   chromedriver                        0x00000001067049ca chromedriver + 5921226
+2   chromedriver                        0x00000001061c45e0 chromedriver + 415200
+3   chromedriver                        0x0000000106204ce4 chromedriver + 679140
+4   chromedriver                        0x0000000106203cd4 chromedriver + 675028
+5   chromedriver                        0x00000001061fe9b5 chromedriver + 653749
+6   chromedriver                        0x00000001061f9bae chromedriver + 633774
+7   chromedriver                        0x000000010624a7cc chromedriver + 964556
+8   chromedriver                        0x0000000106249cb6 chromedriver + 961718
+9   chromedriver                        0x000000010623bde3 chromedriver + 904675
+10  chromedriver                        0x0000000106207c6a chromedriver + 691306
+11  chromedriver                        0x0000000106208dc1 chromedriver + 695745
+12  chromedriver                        0x00000001066cfe50 chromedriver + 5705296
+13  chromedriver                        0x00000001066d3da0 chromedriver + 5721504
+14  chromedriver                        0x00000001066b1797 chromedriver + 5580695
+15  chromedriver                        0x00000001066d482b chromedriver + 5724203
+16  chromedriver                        0x000000010669ffc4 chromedriver + 5509060
+17  chromedriver                        0x00000001066f3088 chromedriver + 5849224
+18  chromedriver                        0x00000001066f324f chromedriver + 5849679
+19  chromedriver                        0x00000001067045a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft1.8" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.8')">testValidPage: Verifies the page title</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.8')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.8' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.8').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:34.772266 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/home_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001069fad98 chromedriver + 5954968
+1   chromedriver                        0x00000001069f29ca chromedriver + 5921226
+2   chromedriver                        0x00000001064b25e0 chromedriver + 415200
+3   chromedriver                        0x00000001064f2ce4 chromedriver + 679140
+4   chromedriver                        0x00000001064f1cd4 chromedriver + 675028
+5   chromedriver                        0x00000001064ec9b5 chromedriver + 653749
+6   chromedriver                        0x00000001064e7bae chromedriver + 633774
+7   chromedriver                        0x00000001065387cc chromedriver + 964556
+8   chromedriver                        0x0000000106537cb6 chromedriver + 961718
+9   chromedriver                        0x0000000106529de3 chromedriver + 904675
+10  chromedriver                        0x00000001064f5c6a chromedriver + 691306
+11  chromedriver                        0x00000001064f6dc1 chromedriver + 695745
+12  chromedriver                        0x00000001069bde50 chromedriver + 5705296
+13  chromedriver                        0x00000001069c1da0 chromedriver + 5721504
+14  chromedriver                        0x000000010699f797 chromedriver + 5580695
+15  chromedriver                        0x00000001069c282b chromedriver + 5724203
+16  chromedriver                        0x000000010698dfc4 chromedriver + 5509060
+17  chromedriver                        0x00000001069e1088 chromedriver + 5849224
+18  chromedriver                        0x00000001069e124f chromedriver + 5849679
+19  chromedriver                        0x00000001069f25a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+        
+        <tr class='errorClass' style="font-weight:bold;color:white;">
+            <td><a href="javascript:showClassDetail('c2','4')">multi_test.MultiPageTests</a></td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>4</td>
+            <td>
+                <button><a href="javascript:showClassDetail('c2','4')"
+                           style="color:#660066;">Detail</a></button>
+            </td>
+        </tr>
+            
+            <tr id="ft2.1" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft2.1')">testGoToImageGallery: Checks Image Gallery navigation menu accuracy and ensures its content is loaded and accurate</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft2.1')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft2.1' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft2.1').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:36.993495 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/multi_test.py", line 10, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001024ddd98 chromedriver + 5954968
+1   chromedriver                        0x00000001024d59ca chromedriver + 5921226
+2   chromedriver                        0x0000000101f955e0 chromedriver + 415200
+3   chromedriver                        0x0000000101fd5ce4 chromedriver + 679140
+4   chromedriver                        0x0000000101fd4cd4 chromedriver + 675028
+5   chromedriver                        0x0000000101fcf9b5 chromedriver + 653749
+6   chromedriver                        0x0000000101fcabae chromedriver + 633774
+7   chromedriver                        0x000000010201b7cc chromedriver + 964556
+8   chromedriver                        0x000000010201acb6 chromedriver + 961718
+9   chromedriver                        0x000000010200cde3 chromedriver + 904675
+10  chromedriver                        0x0000000101fd8c6a chromedriver + 691306
+11  chromedriver                        0x0000000101fd9dc1 chromedriver + 695745
+12  chromedriver                        0x00000001024a0e50 chromedriver + 5705296
+13  chromedriver                        0x00000001024a4da0 chromedriver + 5721504
+14  chromedriver                        0x0000000102482797 chromedriver + 5580695
+15  chromedriver                        0x00000001024a582b chromedriver + 5724203
+16  chromedriver                        0x0000000102470fc4 chromedriver + 5509060
+17  chromedriver                        0x00000001024c4088 chromedriver + 5849224
+18  chromedriver                        0x00000001024c424f chromedriver + 5849679
+19  chromedriver                        0x00000001024d55a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft2.2" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft2.2')">testGoToNasaLive: Checks NASA Live navigation menu accuracy and ensures its content is loaded and accurate</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft2.2')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft2.2' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft2.2').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:39.377870 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/multi_test.py", line 10, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010bfacd98 chromedriver + 5954968
+1   chromedriver                        0x000000010bfa49ca chromedriver + 5921226
+2   chromedriver                        0x000000010ba645e0 chromedriver + 415200
+3   chromedriver                        0x000000010baa4ce4 chromedriver + 679140
+4   chromedriver                        0x000000010baa3cd4 chromedriver + 675028
+5   chromedriver                        0x000000010ba9e9b5 chromedriver + 653749
+6   chromedriver                        0x000000010ba99bae chromedriver + 633774
+7   chromedriver                        0x000000010baea7cc chromedriver + 964556
+8   chromedriver                        0x000000010bae9cb6 chromedriver + 961718
+9   chromedriver                        0x000000010badbde3 chromedriver + 904675
+10  chromedriver                        0x000000010baa7c6a chromedriver + 691306
+11  chromedriver                        0x000000010baa8dc1 chromedriver + 695745
+12  chromedriver                        0x000000010bf6fe50 chromedriver + 5705296
+13  chromedriver                        0x000000010bf73da0 chromedriver + 5721504
+14  chromedriver                        0x000000010bf51797 chromedriver + 5580695
+15  chromedriver                        0x000000010bf7482b chromedriver + 5724203
+16  chromedriver                        0x000000010bf3ffc4 chromedriver + 5509060
+17  chromedriver                        0x000000010bf93088 chromedriver + 5849224
+18  chromedriver                        0x000000010bf9324f chromedriver + 5849679
+19  chromedriver                        0x000000010bfa45a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft2.3" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft2.3')">testGoToNasaPlus: Checks NASA+ navigation menu accuracy</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft2.3')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft2.3' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft2.3').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:41.660144 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/multi_test.py", line 10, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000108ae1d98 chromedriver + 5954968
+1   chromedriver                        0x0000000108ad99ca chromedriver + 5921226
+2   chromedriver                        0x00000001085995e0 chromedriver + 415200
+3   chromedriver                        0x00000001085d9ce4 chromedriver + 679140
+4   chromedriver                        0x00000001085d8cd4 chromedriver + 675028
+5   chromedriver                        0x00000001085d39b5 chromedriver + 653749
+6   chromedriver                        0x00000001085cebae chromedriver + 633774
+7   chromedriver                        0x000000010861f7cc chromedriver + 964556
+8   chromedriver                        0x000000010861ecb6 chromedriver + 961718
+9   chromedriver                        0x0000000108610de3 chromedriver + 904675
+10  chromedriver                        0x00000001085dcc6a chromedriver + 691306
+11  chromedriver                        0x00000001085dddc1 chromedriver + 695745
+12  chromedriver                        0x0000000108aa4e50 chromedriver + 5705296
+13  chromedriver                        0x0000000108aa8da0 chromedriver + 5721504
+14  chromedriver                        0x0000000108a86797 chromedriver + 5580695
+15  chromedriver                        0x0000000108aa982b chromedriver + 5724203
+16  chromedriver                        0x0000000108a74fc4 chromedriver + 5509060
+17  chromedriver                        0x0000000108ac8088 chromedriver + 5849224
+18  chromedriver                        0x0000000108ac824f chromedriver + 5849679
+19  chromedriver                        0x0000000108ad95a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft2.4" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft2.4')">testGoToPodcasts: Checks Podcasts navigation menu accuracy and ensures its content is loaded and accurate</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft2.4')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft2.4' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft2.4').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:43.942720 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/multi_test.py", line 10, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010e479d98 chromedriver + 5954968
+1   chromedriver                        0x000000010e4719ca chromedriver + 5921226
+2   chromedriver                        0x000000010df315e0 chromedriver + 415200
+3   chromedriver                        0x000000010df71ce4 chromedriver + 679140
+4   chromedriver                        0x000000010df70cd4 chromedriver + 675028
+5   chromedriver                        0x000000010df6b9b5 chromedriver + 653749
+6   chromedriver                        0x000000010df66bae chromedriver + 633774
+7   chromedriver                        0x000000010dfb77cc chromedriver + 964556
+8   chromedriver                        0x000000010dfb6cb6 chromedriver + 961718
+9   chromedriver                        0x000000010dfa8de3 chromedriver + 904675
+10  chromedriver                        0x000000010df74c6a chromedriver + 691306
+11  chromedriver                        0x000000010df75dc1 chromedriver + 695745
+12  chromedriver                        0x000000010e43ce50 chromedriver + 5705296
+13  chromedriver                        0x000000010e440da0 chromedriver + 5721504
+14  chromedriver                        0x000000010e41e797 chromedriver + 5580695
+15  chromedriver                        0x000000010e44182b chromedriver + 5724203
+16  chromedriver                        0x000000010e40cfc4 chromedriver + 5509060
+17  chromedriver                        0x000000010e460088 chromedriver + 5849224
+18  chromedriver                        0x000000010e46024f chromedriver + 5849679
+19  chromedriver                        0x000000010e4715a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+        
+        <tr class='errorClass' style="font-weight:bold;color:white;">
+            <td><a href="javascript:showClassDetail('c3','4')">news_test.NewsPageTest</a></td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>4</td>
+            <td>
+                <button><a href="javascript:showClassDetail('c3','4')"
+                           style="color:#660066;">Detail</a></button>
+            </td>
+        </tr>
+            
+            <tr id="ft3.1" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft3.1')">testVerifyNewsPanel1: Checks Panel 1 of News, determines its type (News Release/ Blog) and verifies its URL accuracy, article title, image and content</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft3.1')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft3.1' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft3.1').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:46.248043 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/news_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010516dd98 chromedriver + 5954968
+1   chromedriver                        0x00000001051659ca chromedriver + 5921226
+2   chromedriver                        0x0000000104c255e0 chromedriver + 415200
+3   chromedriver                        0x0000000104c65ce4 chromedriver + 679140
+4   chromedriver                        0x0000000104c64cd4 chromedriver + 675028
+5   chromedriver                        0x0000000104c5f9b5 chromedriver + 653749
+6   chromedriver                        0x0000000104c5abae chromedriver + 633774
+7   chromedriver                        0x0000000104cab7cc chromedriver + 964556
+8   chromedriver                        0x0000000104caacb6 chromedriver + 961718
+9   chromedriver                        0x0000000104c9cde3 chromedriver + 904675
+10  chromedriver                        0x0000000104c68c6a chromedriver + 691306
+11  chromedriver                        0x0000000104c69dc1 chromedriver + 695745
+12  chromedriver                        0x0000000105130e50 chromedriver + 5705296
+13  chromedriver                        0x0000000105134da0 chromedriver + 5721504
+14  chromedriver                        0x0000000105112797 chromedriver + 5580695
+15  chromedriver                        0x000000010513582b chromedriver + 5724203
+16  chromedriver                        0x0000000105100fc4 chromedriver + 5509060
+17  chromedriver                        0x0000000105154088 chromedriver + 5849224
+18  chromedriver                        0x000000010515424f chromedriver + 5849679
+19  chromedriver                        0x00000001051655a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft3.2" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft3.2')">testVerifyNewsPanel2: Checks Panel 2 of News, determines its type (News Release/ Blog) and verifies its URL accuracy, article title, image and content</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft3.2')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft3.2' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft3.2').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:48.566378 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/news_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000105e24d98 chromedriver + 5954968
+1   chromedriver                        0x0000000105e1c9ca chromedriver + 5921226
+2   chromedriver                        0x00000001058dc5e0 chromedriver + 415200
+3   chromedriver                        0x000000010591cce4 chromedriver + 679140
+4   chromedriver                        0x000000010591bcd4 chromedriver + 675028
+5   chromedriver                        0x00000001059169b5 chromedriver + 653749
+6   chromedriver                        0x0000000105911bae chromedriver + 633774
+7   chromedriver                        0x00000001059627cc chromedriver + 964556
+8   chromedriver                        0x0000000105961cb6 chromedriver + 961718
+9   chromedriver                        0x0000000105953de3 chromedriver + 904675
+10  chromedriver                        0x000000010591fc6a chromedriver + 691306
+11  chromedriver                        0x0000000105920dc1 chromedriver + 695745
+12  chromedriver                        0x0000000105de7e50 chromedriver + 5705296
+13  chromedriver                        0x0000000105debda0 chromedriver + 5721504
+14  chromedriver                        0x0000000105dc9797 chromedriver + 5580695
+15  chromedriver                        0x0000000105dec82b chromedriver + 5724203
+16  chromedriver                        0x0000000105db7fc4 chromedriver + 5509060
+17  chromedriver                        0x0000000105e0b088 chromedriver + 5849224
+18  chromedriver                        0x0000000105e0b24f chromedriver + 5849679
+19  chromedriver                        0x0000000105e1c5a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft3.3" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft3.3')">testVerifyNewsPanel3: Checks Panel 3 of News, determines its type (News Release/ Blog) and verifies its URL accuracy, article title, image and content</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft3.3')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft3.3' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft3.3').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:50.747125 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/news_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001014ebd98 chromedriver + 5954968
+1   chromedriver                        0x00000001014e39ca chromedriver + 5921226
+2   chromedriver                        0x0000000100fa35e0 chromedriver + 415200
+3   chromedriver                        0x0000000100fe3ce4 chromedriver + 679140
+4   chromedriver                        0x0000000100fe2cd4 chromedriver + 675028
+5   chromedriver                        0x0000000100fdd9b5 chromedriver + 653749
+6   chromedriver                        0x0000000100fd8bae chromedriver + 633774
+7   chromedriver                        0x00000001010297cc chromedriver + 964556
+8   chromedriver                        0x0000000101028cb6 chromedriver + 961718
+9   chromedriver                        0x000000010101ade3 chromedriver + 904675
+10  chromedriver                        0x0000000100fe6c6a chromedriver + 691306
+11  chromedriver                        0x0000000100fe7dc1 chromedriver + 695745
+12  chromedriver                        0x00000001014aee50 chromedriver + 5705296
+13  chromedriver                        0x00000001014b2da0 chromedriver + 5721504
+14  chromedriver                        0x0000000101490797 chromedriver + 5580695
+15  chromedriver                        0x00000001014b382b chromedriver + 5724203
+16  chromedriver                        0x000000010147efc4 chromedriver + 5509060
+17  chromedriver                        0x00000001014d2088 chromedriver + 5849224
+18  chromedriver                        0x00000001014d224f chromedriver + 5849679
+19  chromedriver                        0x00000001014e35a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="ft3.4" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft3.4')">testVerifyNewsPanel4: Checks Panel 4 of News, determines its type (News Release/ Blog) and verifies its URL accuracy, article title, image and content</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft3.4')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft3.4' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft3.4').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre>2025-06-27 15:12:53.080163 : The chromedriver version (133.0.6943.98) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (137.0.7151.120); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+                             
+</pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "/Users/ruby/NASA_Automated_Tests/Tests/news_test.py", line 9, in setUp
+    super().setUp()
+  File "/Users/ruby/NASA_Automated_Tests/Tests/base_test.py", line 8, in setUp
+    self.driver = webdriver.Chrome()
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ruby/NASA_Automated_Tests/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 137.0.7151.120 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000107b74d98 chromedriver + 5954968
+1   chromedriver                        0x0000000107b6c9ca chromedriver + 5921226
+2   chromedriver                        0x000000010762c5e0 chromedriver + 415200
+3   chromedriver                        0x000000010766cce4 chromedriver + 679140
+4   chromedriver                        0x000000010766bcd4 chromedriver + 675028
+5   chromedriver                        0x00000001076669b5 chromedriver + 653749
+6   chromedriver                        0x0000000107661bae chromedriver + 633774
+7   chromedriver                        0x00000001076b27cc chromedriver + 964556
+8   chromedriver                        0x00000001076b1cb6 chromedriver + 961718
+9   chromedriver                        0x00000001076a3de3 chromedriver + 904675
+10  chromedriver                        0x000000010766fc6a chromedriver + 691306
+11  chromedriver                        0x0000000107670dc1 chromedriver + 695745
+12  chromedriver                        0x0000000107b37e50 chromedriver + 5705296
+13  chromedriver                        0x0000000107b3bda0 chromedriver + 5721504
+14  chromedriver                        0x0000000107b19797 chromedriver + 5580695
+15  chromedriver                        0x0000000107b3c82b chromedriver + 5724203
+16  chromedriver                        0x0000000107b07fc4 chromedriver + 5509060
+17  chromedriver                        0x0000000107b5b088 chromedriver + 5849224
+18  chromedriver                        0x0000000107b5b24f chromedriver + 5849679
+19  chromedriver                        0x0000000107b6c5a8 chromedriver + 5920168
+20  libsystem_pthread.dylib             0x00007ff8119e01d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff8119dbbd3 thread_start + 15
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+        
+
+        <tr id='total_row'>
+            <td>Total</td>
+            <td>16</td>
+            <td>0</td>
+            <td>0</td>
+            <td>16</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<br><br>
+<div id='ending'><b>Time Elapsed: </b>0:01:11.158614</div>
+</body>
+</html>

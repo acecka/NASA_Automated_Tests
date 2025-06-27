@@ -30,8 +30,8 @@ class MultimediaPage(BasePage):
         nasa_plus = self.driver.find_element(*MultiPageLocators.NASA_PLUS_BUTTON)
         # scrolls down to see the button
         self.driver.execute_script("arguments[0].scrollIntoView(true);", nasa_plus)
-        WebDriverWait(self.driver, 10).until(EC.visibility_of(nasa_plus))
-        ActionChains(self.driver).move_to_element(nasa_plus).click().perform()
+        ActionChains(self.driver).move_to_element(nasa_plus).perform()
+        nasa_plus.click()
 
     def get_nasa_plus_url(self):
         nasa_plus = self.driver.find_element(*MultiPageLocators.NASA_PLUS_BUTTON)
@@ -67,7 +67,9 @@ class MultimediaPage(BasePage):
         """
         image_gallery = self.driver.find_element(*MultiPageLocators.IMAGE_GALLERY_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", image_gallery)
-        ActionChains(self.driver).move_to_element(image_gallery).click().perform()
+        ActionChains(self.driver).move_to_element(image_gallery).perform()
+        # repeated click() for laptop use
+        image_gallery.click()
 
     def get_image_gallery_url(self):
         image_gallery = self.driver.find_element(*MultiPageLocators.IMAGE_GALLERY_BUTTON)
@@ -80,7 +82,9 @@ class MultimediaPage(BasePage):
         """
         podcasts_button = self.driver.find_element(*MultiPageLocators.PODCASTS_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", podcasts_button)
-        ActionChains(self.driver).move_to_element(podcasts_button).click().perform()
+        ActionChains(self.driver).move_to_element(podcasts_button).perform()
+        # repeated click() for laptop use
+        podcasts_button.click()
 
     def get_podcasts_url(self):
         podcasts_button = self.driver.find_element(*MultiPageLocators.PODCASTS_BUTTON)
