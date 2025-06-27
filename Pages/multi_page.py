@@ -1,7 +1,10 @@
+from selenium.webdriver import ActionChains
+
 from Pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from time import sleep
 
 
 class MultiPageLocators:
@@ -27,13 +30,14 @@ class MultimediaPage(BasePage):
         nasa_plus = self.driver.find_element(*MultiPageLocators.NASA_PLUS_BUTTON)
         # scrolls down to see the button
         self.driver.execute_script("arguments[0].scrollIntoView(true);", nasa_plus)
-        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(MultiPageLocators.NASA_PLUS_BUTTON))
-        nasa_plus.click()
+        WebDriverWait(self.driver, 10).until(EC.visibility_of(nasa_plus))
+        ActionChains(self.driver).move_to_element(nasa_plus).click().perform()
 
     def get_nasa_plus_url(self):
         nasa_plus = self.driver.find_element(*MultiPageLocators.NASA_PLUS_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", nasa_plus)
-        return self.driver.find_element(*MultiPageLocators.NASA_PLUS_BUTTON).get_attribute("href")
+        ActionChains(self.driver).move_to_element(nasa_plus)
+        return nasa_plus.get_attribute("href")
 
     def click_nasa_live(self):
         """
@@ -41,14 +45,14 @@ class MultimediaPage(BasePage):
         """
         nasa_live = self.driver.find_element(*MultiPageLocators.NASA_LIVE_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", nasa_live)
-        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(MultiPageLocators.NASA_LIVE_BUTTON))
-        nasa_live.click()
+        ActionChains(self.driver).move_to_element(nasa_live).click().perform()
         self.driver.find_element(*MultiPageLocators.YT_REJECT_COOKIES).click()
 
     def get_nasa_live_url(self):
         nasa_live = self.driver.find_element(*MultiPageLocators.NASA_LIVE_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", nasa_live)
-        return self.driver.find_element(*MultiPageLocators.NASA_LIVE_BUTTON).get_attribute("href")
+        ActionChains(self.driver).move_to_element(nasa_live)
+        return nasa_live.get_attribute("href")
 
     def get_yt_account(self):
         """
@@ -63,12 +67,12 @@ class MultimediaPage(BasePage):
         """
         image_gallery = self.driver.find_element(*MultiPageLocators.IMAGE_GALLERY_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", image_gallery)
-        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(MultiPageLocators.IMAGE_GALLERY_BUTTON))
-        image_gallery.click()
+        ActionChains(self.driver).move_to_element(image_gallery).click().perform()
 
     def get_image_gallery_url(self):
         image_gallery = self.driver.find_element(*MultiPageLocators.IMAGE_GALLERY_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", image_gallery)
+        ActionChains(self.driver).move_to_element(image_gallery)
         return self.driver.find_element(*MultiPageLocators.IMAGE_GALLERY_BUTTON).get_attribute("href")
 
     def click_podcasts(self):
@@ -76,10 +80,10 @@ class MultimediaPage(BasePage):
         """
         podcasts_button = self.driver.find_element(*MultiPageLocators.PODCASTS_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", podcasts_button)
-        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(MultiPageLocators.PODCASTS_BUTTON))
-        podcasts_button.click()
+        ActionChains(self.driver).move_to_element(podcasts_button).click().perform()
 
     def get_podcasts_url(self):
         podcasts_button = self.driver.find_element(*MultiPageLocators.PODCASTS_BUTTON)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", podcasts_button)
+        ActionChains(self.driver).move_to_element(podcasts_button)
         return self.driver.find_element(*MultiPageLocators.PODCASTS_BUTTON).get_attribute("href")
